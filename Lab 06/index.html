@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Ultimate Pizza</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <style>
+      body {
+        font-family: "Times New Roman", sans-serif;
+        background-color: lab(70.75% 12.07 50.67);
+        background-image: url(images/background.jpg);
+      }
+      .responsive-table th,
+      .responsive-table td {
+        padding: 0.75rem 0.5rem;
+        text-align: center;
+        border: 1px solid #fca5a5;
+      }
+      .responsive-table th:nth-child(2),
+      .responsive-table td:nth-child(2) {
+        border-left: 2px solid #ef4444;
+      }
+      .flavor-card img {
+        object-fit: cover;
+      }
+      .video-wrapper {
+        max-width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .highlight {
+        background-color: #facc15;
+        padding: 2px 4px;
+        border-radius: 4px;
+      }
+      .logo-img {
+        width: 80px;
+        height: 80px;
+      }
+      .form-select {
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body class="p-4 p-md-5">
+    <div class="container-xl">
+      <header
+        class="position-relative d-flex justify-content-center align-items-center p-4 p-md-5 mb-5 bg-danger text-white rounded-4 shadow-lg"
+      >
+        <a
+          href="#contact-form"
+          class="position-absolute start-0 ms-4 ms-md-5 opacity-75-hover transition duration-300"
+        >
+          <img
+            src="images/logo.jpg"
+            alt="Pizza Logo"
+            class="logo-img rounded-circle border border-warning border-4 object-fit-cover"
+            onerror="this.onerror=null; this.src='https://placehold.co/80x80/B91C1C/ffffff?text=LOGO'"
+          />
+        </a>
+        <h1 class="fs-2 fs-md-1 fw-bolder tracking-tight mx-auto px-5">
+          The Ultimate Pizza
+        </h1>
+      </header>
+      <div class="d-flex flex-wrap justify-content-center gap-3 mb-5">
+        <a
+          href="mailto:k250714@nu.edu.pk"
+          class="btn btn-danger btn-lg shadow-sm"
+        >
+          Contact Us
+        </a>
+        <a
+          href="https://www.allrecipes.com/recipes/231/world-cuisine/european/italian/pizza/"
+          target="_blank"
+          class="btn btn-warning text-dark btn-lg shadow-sm"
+        >
+          External Pizza Recipes
+        </a>
+        <a href="#order-section" class="btn btn-dark btn-lg shadow-sm">
+          Jump to Order Form
+        </a>
+      </div>
+      <audio
+        controls
+        class="audio-player w-100 mw-100 d-block mx-auto my-5"
+        style="max-width: 300px"
+      >
+        <source src="audio/pizza-299710.mp3" type="audio/mpeg" />
+        Your browser does not support the audio element.
+      </audio>
+      <div class="bg-white p-4 rounded-3 shadow mb-5">
+        <p class="text-secondary fs-5">
+          The perfect temperature for baking a classic Neapolitan pizza is
+          approximately
+          <span class="fw-bold text-danger">485 &deg;C</span>. To achieve this,
+          we often reference the chemical formula for carbon dioxide: C<sub
+            class="text-sm text-primary"
+            >O</sub
+          ><sup class="text-sm text-primary">2</sup>. This intense heat ensures
+          our crust rises perfectly.
+          <span class="highlight fst-italic">
+            Remember, the quality of our dough (which contains roughly 75% H<sub
+              class="text-xs"
+              >2</sub
+            >O) is paramount to the ultimate taste!</span
+          >
+          This statement is also
+          <span class="text-decoration-underline">absolutely true</span>.
+        </p>
+      </div>
+      <h2
+        class="fs-2 fw-bold text-danger mt-5 mb-4 border-bottom border-danger border-4 pb-2"
+      >
+        Price List
+      </h2>
+      <table
+        class="responsive-table table table-bordered w-100 mx-auto bg-white rounded-3 shadow overflow-hidden"
+        style="max-width: 500px"
+      >
+        <caption style="text-align: center;" class="fs-4 fw-bold text-danger p-3 caption-top ">
+          Pizza Pricing
+        </caption>
+        <thead class="bg-danger text-white">
+          <tr>
+            <th><u>Pan Pizza</u></th>
+            <th><u>Regular</u></th>
+            <th><u>Large</u></th>
+            <th><u>Extra Large</u></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="table-light-hover">
+            <td>&#8360;400</td>
+            <td>&#8360;650</td>
+            <td>&#8360;1200</td>
+            <td>&#8360;1700</td>
+          </tr>
+        </tbody>
+      </table>
+      <h2
+        class="fs-2 fw-bold text-danger mt-5 mb-4 border-bottom border-danger border-4 pb-2"
+      >
+        Delivery Times
+      </h2>
+      <table
+        class="responsive-table table table-bordered w-100 mx-auto bg-white rounded-3 shadow overflow-hidden"
+        style="max-width: 350px"
+      >
+        <caption style="text-align: center;" class="fs-5 fw-bold text-danger p-3 caption-top">
+          Average Estimated Times
+        </caption>
+        <thead class="bg-danger text-white">
+          <tr class="table-danger">
+            <th colspan="2" class="py-3 bg-danger text-white">
+              Karachi Delivery Zones
+            </th>
+          </tr>
+          <tr class="bg-danger text-white opacity-75">
+            <th class="py-2">Area</th>
+            <th class="py-2">Time (Mins)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="table-light-hover">
+            <td>
+              North Nazimabad, Gulshan, North Karachi, Nazimabad.
+            </td>
+            <td>35 - 45</td>
+          </tr>
+          <tr class="table-light-hover">
+            <td>Defence, Clifton.</td>
+            <td>25 - 35</td>
+          </tr>
+        </tbody>
+      </table>
+      <h2
+        class="fs-2 fw-bold text-danger mt-5 mb-4 border-bottom border-danger border-4 pb-2"
+      >
+        Flavours
+      </h2>
+      <div class="row row-cols-1 row-cols-md-2 g-4">
+        <div class="col">
+          <div
+            class="flavor-card card h-100 p-3 rounded-4 shadow-sm border-danger border-opacity-50"
+          >
+            <div class="card-body">
+              <h3 class="fs-4 fw-bold text-danger mb-2">1. Tarzan Tikka</h3>
+              <p class="fst-italic text-secondary mb-3">
+                A thrilling jungle of flavor! Tender, marinated chicken pieces
+                tossed in a rich, smoky tikka masala sauce, layered over a
+                vibrant garlic base. Topped with fresh cilantro and a cooling
+                drizzle of mint yogurt.
+                <ul>
+                  <li>
+                    <b>Base: </b>Vibrant Garlic Base
+                  </li>
+                  <li>
+                    <b>Protein: </b>Tender, Marinated Chicken Pieces
+                  </li>
+                  <li>
+                    <b>Sauce: </b>Rich, Smoky Tikka Masala Sauce
+                  </li>
+                  <li>
+                    <b>Toppings:</b>
+                    <ul>
+                    <li>
+                      Fresh Cilantro
+                    </li>
+                    <li>
+                      Cooling Drizzle of Mint Yogurt
+                    </li>
+                    </ul>
+                  </li>
+                </ul>
+              </p>
+              <img
+                src="images/tarzan tikka.jpg"
+                alt="Tarzan Tikka"
+                class="img-fluid rounded-3 shadow-sm mx-auto d-block"
+                style="max-width: 300px; height: 192px"
+                onerror="this.onerror=null; this.src='https://placehold.co/300x200/B91C1C/ffffff?text=Tarzan+Tikka'"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div
+            class="flavor-card card h-100 p-3 rounded-4 shadow-sm border-danger border-opacity-50"
+          >
+            <div class="card-body">
+              <h3 class="fs-4 fw-bold text-danger mb-2">2. Dancing Fajita</h3>
+              <p class="fst-italic text-secondary mb-3">
+                Get ready to move! Seasoned strips of beef (or chicken) and bell
+                peppers—sautéed with zesty lime, cumin, and chili—on a bed of
+                mild salsa and melted Monterey Jack cheese.
+                <ul>
+                  <li>
+                    <b>Base: </b>Mild Salsa
+                  </li>
+                  <li>
+                    <b>Cheese: </b>Melted Monterey Jack Cheese
+                  </li>
+                  <li>
+                    <b>Protein Options:</b>
+                    <ul>
+                      <li>
+                        Seasoned Strips of Beef
+                      </li>
+                      <li>
+                        Seasoned Strips of Chicken
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <b>Vegetables & Seasoning:</b>
+                    <ul>
+                      <li>
+                        Bell Peppers (Sauteed)
+                      </li>
+                      <li>
+                        Zesty Lime
+                      </li>
+                      <li>
+                        Cumin
+                      </li>
+                      <li>
+                        Chili
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </p>       
+              <img
+                src="images/dancing fajita.jpg"
+                alt="Dancing Fajita"
+                class="img-fluid rounded-3 shadow-sm mx-auto d-block mt-3"
+                style="max-width: 300px; height: 192px"
+                onerror="this.onerror=null; this.src='https://placehold.co/300x200/B91C1C/ffffff?text=Dancing+Fajita'"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div
+            class="flavor-card card h-100 p-3 rounded-4 shadow-sm border-danger border-opacity-50"
+          >
+            <div class="card-body">
+              <h3 class="fs-4 fw-bold text-danger mb-2">3. Wicked Blend</h3>
+              <p class="fst-italic text-secondary mb-3">
+                The ultimate indulgence. This pizza features four meticulously
+                layered cheeses (sharp cheddar, creamy Brie, Gorgonzola, and
+                mozzarella) paired with sweet caramelized onions and a subtle
+                touch of truffle oil.
+                <ul>
+                  <li>
+                    <b>Cheeses (Meticulously Layered):</b>
+                    <ul>
+                      <li>
+                        Sharp Cheddar
+                      </li>
+                      <li>
+                        Creamy Brie
+                      </li>
+                      <li>
+                        Gorgonzola
+                      </li>
+                      <li>
+                        Mozzarella
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <b>Aromatics: </b>Sweet Caramelized Onions
+                  </li>
+                  <li>
+                    <b>Finishing Touch: </b>Subtle Touch of Truffle Oil
+                  </li>
+                </ul>
+              </p>
+              <img
+                src="images/wicked blend.jpg"
+                alt="Wicked Blend"
+                class="img-fluid rounded-3 shadow-sm mx-auto d-block"
+                style="max-width: 300px; height: 192px"
+                onerror="this.onerror=null; this.src='https://placehold.co/300x200/B91C1C/ffffff?text=Wicked+Blend'"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div
+            class="flavor-card card h-100 p-3 rounded-4 shadow-sm border-danger border-opacity-50"
+          >
+            <div class="card-body">
+              <h3 class="fs-4 fw-bold text-danger mb-2">4. Phantom</h3>
+              <p class="fst-italic text-secondary mb-3">
+                A mysteriously light and refreshing white pizza. A base of olive
+                oil, fresh garlic, and ricotta, topped with thinly sliced
+                potatoes, rosemary, and finished with a scattering of sea salt.
+                Perfect for cheese and herb purists.
+                <ul>
+                  <li>
+                    <b>Base: </b>Olive Oil, Fresh Garlic, and Ricotta
+                  </li>
+                  <li>
+                    <b>Toppings:</b>
+                    <ul>
+                      <li>
+                        Thinly Sliced Potatoes
+                      </li>
+                      <li>
+                        Rosemary
+                      </li>
+                      <li>
+                        Sea Salt (Finished with a Scattering)
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </p>
+              <img
+                src="images/phantom.jpg"
+                alt="Phantom"
+                class="img-fluid rounded-3 shadow-sm mx-auto d-block"
+                style="max-width: 300px; height: 192px"
+                onerror="this.onerror=null; this.src='https://placehold.co/300x200/B91C1C/ffffff?text=Phantom'"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="video-section mt-5 p-4 text-center bg-white rounded-4 shadow">
+        <h3 class="fs-4 fw-semibold text-danger mb-3">
+          Our Pizza-Making Process
+        </h3>
+        <div class="video-wrapper">
+          <div class="ratio ratio-16x9">
+            <video controls class="rounded-3">
+              <source src="video/Download.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+      </div>
+      <div
+        class="mt-5 mx-auto p-4 p-md-5 bg-danger-subtle rounded-4 shadow-lg"
+        id="order-section"
+        style="max-width: 500px"
+      >
+        <h3 class="fs-3 fw-bold text-danger-emphasis mb-4" id="contact-form">
+          Place Your Order 
+        </h3>
+        <form action="submit.php" method="post" onsubmit="submitOrder(event);">
+          <div class="mb-3">
+            <label for="name" class="form-label fw-semibold text-dark"
+              >Name:</label
+            >
+            <input
+              type="text"
+              id="name"
+              name="name"
+              required
+              class="form-control rounded-2 border-danger"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label fw-semibold text-dark"
+              >Email:</label
+            >
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+              class="form-control rounded-2 border-danger"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="address" class="form-label fw-semibold text-dark"
+              >Delivery Address:</label
+            >
+            <select
+              id="address"
+              name="address"
+              class="form-select rounded-2 border-danger"
+            >
+              <option>North Nazimabad</option>
+              <option>North Karachi</option>
+              <option>Nazimabad</option>
+              <option>Gulshan e Iqbal</option>
+              <option>Defence</option>
+              <option>Clifton</option>
+              <option>Other Area</option>
+            </select>
+          </div>
+          <fieldset class="mb-3">
+            <label class="form-label fw-semibold text-dark d-block mb-2"
+              >Crust Type:</label
+            >
+            <div class="d-flex flex-wrap gap-3">
+              <div class="form-check form-check-inline">
+                <input
+                  type="radio"
+                  name="crust"
+                  id="crustPan"
+                  value="pan"
+                  class="form-check-input border-danger"
+                  required
+                  checked
+                />
+                <label class="form-check-label" for="crustPan">Pan</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input
+                  type="radio"
+                  name="crust"
+                  id="crustHandTossed"
+                  value="hand_tossed"
+                  class="form-check-input border-danger"
+                />
+                <label class="form-check-label" for="crustHandTossed"
+                  >Hand-Tossed</label
+                >
+              </div>
+              <div class="form-check form-check-inline">
+                <input
+                  type="radio"
+                  name="crust"
+                  id="crustThin"
+                  value="thin"
+                  class="form-check-input border-danger"
+                />
+                <label class="form-check-label" for="crustThin"
+                  >Thin Crust</label
+                >
+              </div>
+            </div>
+          </fieldset>
+          <fieldset class="mb-4">
+            <label class="form-label fw-semibold text-dark d-block mb-2"
+              >Extra Toppings (Select All That Apply):</label
+            >
+            <div class="row g-2">
+              <div class="col-6">
+                <div class="form-check">
+                  <input
+                    type="checkbox"
+                    name="toppings"
+                    id="toppingMushrooms"
+                    value="mushrooms"
+                    class="form-check-input border-danger"
+                  />
+                  <label class="form-check-label" for="toppingMushrooms"
+                    >Mushrooms</label
+                  >
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="form-check">
+                  <input
+                    type="checkbox"
+                    name="toppings"
+                    id="toppingOlives"
+                    value="olives"
+                    class="form-check-input border-danger"
+                  />
+                  <label class="form-check-label" for="toppingOlives"
+                    >Black Olives</label
+                  >
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="form-check">
+                  <input
+                    type="checkbox"
+                    name="extra_cheese"
+                    id="toppingCheese"
+                    value="extra_cheese"
+                    class="form-check-input border-danger"
+                  />
+                  <label class="form-check-label" for="toppingCheese"
+                    >Extra Cheese</label
+                  >
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="form-check">
+                  <input
+                    type="checkbox"
+                    name="jalapenos"
+                    id="toppingJalapenos"
+                    value="jalapenos"
+                    class="form-check-input border-danger"
+                  />
+                  <label class="form-check-label" for="toppingJalapenos"
+                    >Jalapeños</label
+                  >
+                </div>
+              </div>
+            </div>
+          </fieldset>
+          <div class="mb-4">
+            <label for="message" class="form-label fw-semibold text-dark"
+              >Message / Specific Instructions:</label
+            >
+            <textarea
+              id="message"
+              name="message"
+              rows="4"
+              class="form-control rounded-2 border-danger resize-vertical"
+            >
+Your Instructions Here...</textarea
+            >
+          </div>
+          <button
+            type="submit"
+            class="btn btn-danger btn-lg w-100 fw-bold shadow-lg"
+          >
+            Submit Order
+          </button>
+        </form>
+      </div>
+      <footer
+        class="mt-5 p-3 text-center text-sm text-secondary border-top border-danger border-opacity-50 text-black"
+      >
+        &copy; 2025 The Ultimate Pizza. All rights reserved. |
+        <a
+          href="#top"
+          class="text-danger text-decoration-none hover:text-danger-emphasis"
+          >Back to Top</a
+        >
+      </footer>
+    <div
+      class="modal fade"
+      id="successModal"
+      tabindex="-1"
+      aria-labelledby="successModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content rounded-4 shadow-lg">
+          <div class="modal-header bg-success-subtle border-0">
+            <h5
+              class="modal-title text-success-emphasis fw-bold"
+              id="successModalLabel"
+            >
+              Confirmation
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body text-center p-4">
+            <svg
+              class="mb-3 text-success"
+              xmlns="http://www.w3.org/2000/svg"
+              width="48"
+              height="48"
+              fill="currentColor"
+              class="bi bi-check-circle-fill"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"
+              />
+            </svg>
+            <h4 class="fw-bold text-dark mb-2">Order Confirmed!</h4>
+            <p class="text-secondary mb-3">
+              Your order has been submitted successfully. We are preparing your
+              ultimate pizza now!
+            </p>
+          </div>
+          <div class="modal-footer justify-content-center border-0 p-3">
+            <button
+              type="button"
+              class="btn btn-danger"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      function submitOrder(event) {
+        event.preventDefault(); 
+        const successModalElement = document.getElementById("successModal");
+        const successModal = new bootstrap.Modal(successModalElement);
+        successModal.show();
+        event.target.reset();
+        document.getElementById("message").value = "Your Instructions Here...";
+      }
+    </script>
+  </body>
+</html>
